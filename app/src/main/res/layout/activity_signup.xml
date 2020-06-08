@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="#FFFFFF">
+    tools:context=".LoginActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
@@ -14,59 +13,62 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/ic_profile_pic"/>
+        android:src="@drawable/ic_profile_pic" />
+
     <LinearLayout
         android:id="@+id/input_field_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@+id/profile_image"
-        android:layout_margin="40dp">
-        <EditText
+        android:layout_margin="40dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/signUp_user_name"
             android:layout_width="match_parent"
             android:layout_height="57dp"
+            android:background="@drawable/inputfieldbg"
             android:hint="Name"
-            android:paddingStart="20dp"
-            android:background="@drawable/inputfieldbg"/>
-        <EditText
+            android:paddingStart="20dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/signUp_user_email"
             android:layout_width="match_parent"
             android:layout_height="57dp"
-            android:hint="Email"
             android:layout_marginTop="20dp"
-            android:paddingStart="20dp"
-            android:background="@drawable/inputfieldbg"/>
-        <EditText
+            android:background="@drawable/inputfieldbg"
+            android:hint="Email"
+            android:paddingStart="20dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/signUp_user_password"
             android:layout_width="match_parent"
             android:layout_height="57dp"
-            android:hint="Password"
-            android:paddingStart="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/inputfieldbg"/>
+            android:background="@drawable/inputfieldbg"
+            android:hint="Password"
+            android:paddingStart="20dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/user_signUp_btn"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_marginTop="20dp"
             android:text="Sign Up"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:background="@drawable/btnbg"/>
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/exist_account_SignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/input_field_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:textSize="16sp"
         android:gravity="center_horizontal"
+        android:text="Already have an account ? Signin now"
         android:textColor="#424242"
-        android:layout_below="@+id/input_field_layout"
-        android:text="Already have an account ? Signin now" />
+        android:textSize="16sp" />
 
 </RelativeLayout>

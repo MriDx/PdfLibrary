@@ -10,7 +10,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        supportActionBar?.hide()
         create_account.setOnClickListener {
             startActivity(Intent(this, SignupActvity::class.java))
         }
