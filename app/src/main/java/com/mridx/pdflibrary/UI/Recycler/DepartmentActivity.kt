@@ -1,8 +1,9 @@
-package com.mridx.pdflibrary
+package com.mridx.pdflibrary.UI.Recycler
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.mridx.pdflibrary.R
 import kotlinx.android.synthetic.main.department_recycler.*
 
 class DepartmentActivity : AppCompatActivity() {
