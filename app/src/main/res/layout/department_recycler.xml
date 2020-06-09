@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
-  <TextView
+    android:layout_height="match_parent">
+
+  <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/user_welcome"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Welcome,"
-      android:layout_marginStart="25dp"
-      android:layout_marginTop="20dp"
+      android:textColor="@android:color/tab_indicator_text"
       android:textSize="18sp"
-      android:textColor="@android:color/tab_indicator_text"/>
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UserName"
-        android:layout_marginStart="25dp"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/user_welcome"
-        android:textColor="@android:color/secondary_text_light"/>
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.04" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/userName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/user_welcome"
+      android:text="UserName"
+      android:textColor="@android:color/secondary_text_light"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.11"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.065" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/department_recycler_view"
-        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:paddingLeft="20dp"
         android:paddingEnd="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
         tools:listitem="@layout/item" />
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
