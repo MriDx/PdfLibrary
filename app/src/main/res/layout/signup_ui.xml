@@ -14,16 +14,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@drawable/ic_profile_pic" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/user_email"
+        android:id="@+id/signUp_user_name"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/inputfieldbg"
-        android:hint="Email"
+        android:hint="Name"
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,21 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/user_password"
+        android:id="@+id/signUp_user_email"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/inputfieldbg"
+        android:hint="Email"
+        android:paddingStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_user_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/signUp_user_password"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
@@ -42,36 +56,37 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_email"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_user_email"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/user_signIn_btn"
+        android:id="@+id/user_signUp_btn"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:text="Signin"
+        android:text="Signup"
         android:textAllCaps="false"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_password"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_user_password"
         app:layout_constraintVertical_bias="0.15" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/create_account"
+        android:id="@+id/exist_account_SignIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Don't have an account ? Signup now"
+        android:text="Already have an account ? Signin now"
         android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/user_signUp_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_signIn_btn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.127" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
