@@ -14,10 +14,10 @@
       android:textSize="18sp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.1"
+      app:layout_constraintHorizontal_bias="0.11"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.04" />
+      app:layout_constraintVertical_bias="0.022" />
 
   <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/userName"
@@ -30,21 +30,23 @@
       android:textStyle="bold"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.11"
+      app:layout_constraintHorizontal_bias="0.125"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.065" />
+      app:layout_constraintVertical_bias="0.044" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/department_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName"
-        tools:listitem="@layout/item" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/department_recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="653dp"
+      android:paddingStart="20dp"
+      android:paddingEnd="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0"
+      tools:listitem="@layout/item" />
 </androidx.constraintlayout.widget.ConstraintLayout>
