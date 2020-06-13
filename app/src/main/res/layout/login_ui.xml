@@ -78,6 +78,8 @@
             android:insetBottom=".5dp"
             android:text="@string/signin_btn"
             android:textAllCaps="false"
+            app:elevation="5dp"
+            app:rippleColor="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/user_password"

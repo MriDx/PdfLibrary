@@ -1,7 +1,8 @@
-package com.mridx.pdflibrary
+package com.mridx.pdflibrary.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mridx.pdflibrary.R
 import kotlinx.android.synthetic.main.signup_ui.*
 
 class SignupActvity : AppCompatActivity() {

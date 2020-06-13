@@ -24,4 +24,5 @@ class DepartmentActivity : AppCompatActivity() {
         }
         return list
     }
+
 }
