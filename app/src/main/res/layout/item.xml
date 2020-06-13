@@ -1,26 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    android:layout_height="130dp"
+    android:layout_width="160dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:orientation="vertical">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    app:rippleColor="@color/colorPrimaryDark">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="4dp"
-        app:cardBackgroundColor="@color/colorAccent"
-        app:cardCornerRadius="10dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtDepartment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:text="Department 1"
-            android:textSize="15sp"
-            android:theme="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked" />
-    </androidx.cardview.widget.CardView>
+            android:layout_gravity="center"/>
 
-</LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
