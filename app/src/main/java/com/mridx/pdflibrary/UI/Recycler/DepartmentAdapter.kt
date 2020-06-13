@@ -31,7 +31,7 @@ class DepartmentAdapter(private val departmentList: ArrayList<DepartmentData>) :
         val items: DepartmentData = departmentList[position]
         holder.textView.text = items.departmentName
         holder.itemView.setOnClickListener {
-            
+
         }
     }
 }
