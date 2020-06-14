@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PdfLibrary</string>
+    <string name="userGreet">Welcome,</string>
+    <string name="user_email">Email</string>
+    <string name="user_password">Password</string>
+    <string name="signin_btn">Signin</string>
+    <string name="signup_suggestion">Don\'t have an account ? Signup now</string>
+    <string name="user_name">Name</string>
+    <string name="signup_btn">Signup</string>
+    <string name="signin_suggestion">Already have an account ? Signin now</string>
 </resources>
