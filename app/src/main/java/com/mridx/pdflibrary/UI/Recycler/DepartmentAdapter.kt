@@ -14,10 +14,13 @@ import com.mridx.pdflibrary.R
 import com.mridx.pdflibrary.UI.PdfActivity
 import kotlinx.android.synthetic.main.item.view.*
 
-class DepartmentAdapter(private val departmentList: ArrayList<DepartmentData>) :
+class DepartmentAdapter(private val departmentList: ArrayList<DepartmentData>, private val listener:(DepartmentData) -> Unit) :
     RecyclerView.Adapter<DepartmentAdapter.Viewholder>() {
     class Viewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.txtDepartment
+        fun bind(items: DepartmentData){
+            textView.text = items.departmentName
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Viewholder {
@@ -30,8 +33,9 @@ class DepartmentAdapter(private val departmentList: ArrayList<DepartmentData>) :
     override fun onBindViewHolder(holder: Viewholder, position: Int) {
         val items: DepartmentData = departmentList[position]
         holder.textView.text = items.departmentName
+        holder.bind(items)
         holder.itemView.setOnClickListener {
-
+            listener(items)
         }
     }
 }
