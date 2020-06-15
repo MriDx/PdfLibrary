@@ -24,6 +24,8 @@ class DepartmentAdapter(val context: Context, private val departmentList: ArrayL
         init {
             itemView.setOnClickListener {
                 Toast.makeText(context, "Department $currentPosition", Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, PdfActivity::class.java)
+
             }
         }
         fun setData(departmentData: DepartmentData?, position: Int){

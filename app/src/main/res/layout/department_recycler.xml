@@ -5,6 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/profile_pic"
+      android:layout_width="46dp"
+      android:layout_height="48dp"
+      android:layout_marginTop="20dp"
+      android:src="@drawable/ic_profile_pic"
+      app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.88"
+      app:layout_constraintStart_toEndOf="@+id/userName"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0" />
+
   <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/user_welcome"
       android:layout_width="wrap_content"
@@ -36,6 +49,7 @@
       app:layout_constraintVertical_bias="0.054" />
 
   <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout2"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_marginTop="80dp"
@@ -55,8 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item"
-        />
+        tools:listitem="@layout/item" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
