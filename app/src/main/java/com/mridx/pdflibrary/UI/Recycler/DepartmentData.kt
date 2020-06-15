@@ -1,5 +1,6 @@
 package com.mridx.pdflibrary.UI.Recycler
 
-class DepartmentData(
-    val departmentName: String
-)
+import android.content.Context
+
+data class DepartmentData(val departmentName: String)
+

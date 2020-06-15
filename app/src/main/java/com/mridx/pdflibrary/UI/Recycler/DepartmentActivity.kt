@@ -13,7 +13,7 @@ class DepartmentActivity : AppCompatActivity() {
         setContentView(R.layout.department_recycler)
         val departmentList = arrayList(50)
         department_recycler_view.layoutManager = GridLayoutManager(this, 2)
-        department_recycler_view.adapter = DepartmentAdapter(departmentList as ArrayList<DepartmentData>)
+        department_recycler_view.adapter = DepartmentAdapter( this, departmentList as ArrayList<DepartmentData>)
         department_recycler_view.setHasFixedSize(true)
     }
 
