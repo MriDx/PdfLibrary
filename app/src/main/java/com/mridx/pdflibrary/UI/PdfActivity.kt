@@ -1,8 +1,11 @@
 package com.mridx.pdflibrary.UI
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import com.mridx.pdflibrary.R
 import com.mridx.pdflibrary.UI.Recycler.DepartmentActivity
@@ -14,12 +17,9 @@ class PdfActivity: AppCompatActivity() {
         setContentView(R.layout.pdfview)
         pdfViewer()
         val intent = intent
-        topAppBar.setOnClickListener {
-                startActivity(Intent(this, DepartmentActivity::class.java))
-               finish()
-        }
-        topAppBar.title = intent.getStringExtra("pdfName")
-
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = intent.getStringExtra("pdfName")
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
     private fun pdfViewer(){
         pdfView.fromAsset("sample.pdf")
@@ -33,5 +33,12 @@ class PdfActivity: AppCompatActivity() {
             .enableAntialiasing(true)
             .spacing(0)
             .load()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home -> onBackPressed()
+        }
+        return true
     }
 }
