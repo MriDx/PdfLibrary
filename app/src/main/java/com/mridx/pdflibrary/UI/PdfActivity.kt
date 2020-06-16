@@ -32,6 +32,6 @@ class PdfActivity: AppCompatActivity() {
             .scrollHandle(null)
             .enableAntialiasing(true)
             .spacing(0)
-            .load();
+            .load()
     }
 }
