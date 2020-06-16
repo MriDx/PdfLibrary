@@ -34,6 +34,7 @@ class DepartmentAdapter(context: Context, private val pdfList: ArrayList<Departm
         holder.itemView.setOnClickListener {
             onItemClicked?.invoke(pdfList[position])
             val intent = Intent(context, PdfActivity::class.java)
+            intent.putExtra("pdfName", items.departmentName)
             context?.startActivity(intent)
             Toast.makeText(context, items.departmentName, Toast.LENGTH_SHORT).show()
         }
