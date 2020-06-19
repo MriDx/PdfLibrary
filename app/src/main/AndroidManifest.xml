@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".UI.SignupActvity" />
         <activity android:name="com.mridx.pdflibrary.UI.Recycler.DepartmentActivity"/>
-        <activity android:name=".UI.PdfActivity"/>
+        <activity android:name=".UI.PdfViewActivity"/>
         <activity android:name=".UI.RecyclerPdfList.PdfListActivity"/>
     </application>
 

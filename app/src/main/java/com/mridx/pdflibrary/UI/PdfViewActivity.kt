@@ -14,7 +14,7 @@ import com.mridx.pdflibrary.R
 import com.mridx.pdflibrary.UI.Recycler.DepartmentActivity
 import kotlinx.android.synthetic.main.pdfview.*
 
-class PdfActivity: AppCompatActivity() {
+class PdfViewActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pdfview)
