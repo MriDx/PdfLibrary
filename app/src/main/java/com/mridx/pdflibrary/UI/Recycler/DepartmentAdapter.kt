@@ -2,7 +2,6 @@ package com.mridx.pdflibrary.UI.Recycler
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.mridx.pdflibrary.R
 import com.mridx.pdflibrary.UI.PdfActivity
+import com.mridx.pdflibrary.UI.RecyclerPdfList.PdfListActivity
 import kotlinx.android.synthetic.main.item.view.*
 
 class DepartmentAdapter(context: Context, private val pdfList: ArrayList<DepartmentData>) :
@@ -33,10 +33,9 @@ class DepartmentAdapter(context: Context, private val pdfList: ArrayList<Departm
         holder.itemView.txtDepartment.text = items.departmentName
         holder.itemView.setOnClickListener {
             onItemClicked?.invoke(pdfList[position])
-            val intent = Intent(context, PdfActivity::class.java)
-            intent.putExtra("pdfName", items.departmentName)
+            val intent = Intent(context, PdfListActivity::class.java)
+            intent.putExtra("departmenName", items.departmentName)
             context?.startActivity(intent)
-            Toast.makeText(context, items.departmentName, Toast.LENGTH_SHORT).show()
         }
     }
 }
