@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mridx.pdflibrary.R
-import com.mridx.pdflibrary.UI.Recycler.DepartmentActivity
+import com.mridx.pdflibrary.UI.Recycler.SubjectActivity
 import kotlinx.android.synthetic.main.login_ui.*
 
 
@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
              startActivity(Intent(this, SignupActvity::class.java))
          }
          user_signIn_btn.setOnClickListener {
-             startActivity(Intent(this, DepartmentActivity::class.java))
+             startActivity(Intent(this, SubjectActivity::class.java))
          }
 
     }

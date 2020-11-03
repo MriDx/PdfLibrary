@@ -1,17 +1,9 @@
 package com.mridx.pdflibrary.UI
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
-import android.widget.SearchView
-import android.widget.SearchView.OnQueryTextListener
-import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import com.mridx.pdflibrary.R
-import com.mridx.pdflibrary.UI.Recycler.DepartmentActivity
 import kotlinx.android.synthetic.main.pdfview.*
 
 class PdfViewActivity: AppCompatActivity() {

@@ -3,27 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="130dp"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/colorAccent"
     app:cardCornerRadius="10dp"
-    app:cardElevation="2dp"
+    app:cardElevation="5dp"
     app:rippleColor="#90F1F1F1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/subjectImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_email"
+            android:padding="8dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtDepartment"
-            android:layout_width="wrap_content"
+            android:id="@+id/subjectName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Demo"
-            android:textColor="@android:color/white"
+            android:maxLines="3"
+            android:text="Demudfvufnunrgniengierngerinerio"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
